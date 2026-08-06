@@ -1,0 +1,11 @@
+{
+ "rpc": "https://mainnet.base.org",
+ "usdc": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+ "event": "AuthorizationUsed",
+ "topic0": "0x98de503528ee59b575ef0c0a2576a82497bfc029a5685b209e9ec333479b10a5",
+ "from_block": 49556153,
+ "to_block": 49599353,
+ "from_ts": 1785901653,
+ "to_ts": 1785988053,
+ "pulled_at": 1785988053
+}
