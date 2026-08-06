@@ -1,0 +1,10 @@
+{
+ "giant_submitters": 23,
+ "giant_share": 81.43,
+ "bridge_payers": 44,
+ "payers_in_giant": 164,
+ "submitters_sharing_any_payer": 23,
+ "jaccard_median": 0.2059,
+ "jaccard_pairs_over_half": 0,
+ "jaccard_pairs": 253
+}

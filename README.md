@@ -78,3 +78,51 @@ block explorer or RPC endpoint for the transaction count of
 `0x2b4ee3387008e5ff1a9996fc8b48d2fd61389037`.
 
 Apache-2.0.
+
+## Part two: who actually operates the settlements
+
+A second paper, [arXiv 2607.19545](https://arxiv.org/abs/2607.19545) ("When HTTP 402
+Meets the Blockchain", Wang, Yang, Chen, Ji, Payer, 21 July 2026), studies 15 x402
+facilitators and treats facilitator centralization as a core risk. We checked the
+centralization question against the same 24-hour window, from a different angle.
+
+A facilitator, measured on-chain, is whoever submits the settlement transaction and
+pays its gas — that is `tx.from`. Sampling 400 of the window's blocks (2,213
+settlements) gives **77 distinct submitter addresses**, which looks like a broad
+field.
+
+It isn't. Two independent tests collapse it:
+
+**Co-service graph** (`x402_components.py`). Treat submitters and payers as a
+bipartite graph and take connected components: 77 submitters resolve to 36
+components, and the largest — 23 submitters serving 164 payers — carries **81.4%**
+of sampled settlements. This method over-merges by construction: one payer using two
+independent facilitators fuses them. `x402_components2.py` measures how badly, and
+the answer is "enough to matter" — median pairwise payer-set overlap between
+submitters in the giant component is only 0.206, with no pair above 0.5. Treat the
+81.4% as an upper bound from this method alone.
+
+**Fleet fingerprint** (`x402_fleet.py`). Independent operators accumulate
+transactions at their own pace; wallets driven by one system march in step. Lifetime
+transaction counts of the observed submitters cluster hard:
+
+| wallets | lifetime tx counts | spread | share of sampled settlements |
+|---:|:---|---:|---:|
+| 15 | 1,092,034 – 1,094,993 | 0.27% | 61.2% |
+| 5 | 2,843,527 – 2,853,016 | 0.33% | 19.3% |
+| 10 | 9,034 – 9,045 | 0.12% | 0.5% |
+
+Fifteen addresses do not independently arrive within 0.27% of each other after a
+million transactions apiece. **Two pools account for 80.5% of settlement**, and 30 of
+the 77 visible submitters resolve to three operators. This test shares no assumptions
+with the graph method, and the two agree.
+
+### Limits
+
+Nonce proximity shows wallets driven in lockstep by one controller; it does not
+identify who that controller is, and does not imply wrongdoing — running a hot-wallet
+pool is ordinary infrastructure practice for a payment facilitator. The sample is 400
+of 43,200 blocks (about 1%), which is adequate for shares and not for absolute counts.
+We did not attempt any part of the paper's security analysis: their eight
+authorization rules and four attack vectors come from black-box testing of live
+facilitators, which we have neither replicated nor verified.

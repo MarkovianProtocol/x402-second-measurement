@@ -1,0 +1,379 @@
+{
+ "window": {
+  "rpc": "https://mainnet.base.org",
+  "usdc": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+  "event": "AuthorizationUsed",
+  "topic0": "0x98de503528ee59b575ef0c0a2576a82497bfc029a5685b209e9ec333479b10a5",
+  "from_block": 49556153,
+  "to_block": 49599353,
+  "from_ts": 1785901653,
+  "to_ts": 1785988053,
+  "pulled_at": 1785988053
+ },
+ "sampled_blocks": 400,
+ "settlements_in_sample": 2213,
+ "distinct_submitters": 77,
+ "top10_share": 51.51,
+ "submitters": [
+  {
+   "submitter": "0x7f72a02c682e908d46a5677fe937cdb612d94a3b",
+   "settlements": 264,
+   "share": 11.93,
+   "distinct_payers_served": 114
+  },
+  {
+   "submitter": "0x625d8a65134079f8faaac39a7947c73d93c6ac39",
+   "settlements": 104,
+   "share": 4.7,
+   "distinct_payers_served": 17
+  },
+  {
+   "submitter": "0xe72f0af4cf41356d433723547f1412ca27fbb1b8",
+   "settlements": 101,
+   "share": 4.56,
+   "distinct_payers_served": 19
+  },
+  {
+   "submitter": "0x97acce27d5069544480bde0f04d9f47d7422a016",
+   "settlements": 101,
+   "share": 4.56,
+   "distinct_payers_served": 14
+  },
+  {
+   "submitter": "0x93f6601151ccb08f333ab4b1cccfb1e188c0be44",
+   "settlements": 100,
+   "share": 4.52,
+   "distinct_payers_served": 20
+  },
+  {
+   "submitter": "0x2a89407a98a0732b7fd578c4e156b7166540eb5a",
+   "settlements": 96,
+   "share": 4.34,
+   "distinct_payers_served": 19
+  },
+  {
+   "submitter": "0x8cda367232d78c067116e3260da881d2da8ffa39",
+   "settlements": 94,
+   "share": 4.25,
+   "distinct_payers_served": 23
+  },
+  {
+   "submitter": "0x4c934c63c786157fefd990945b25ea60a0fb0205",
+   "settlements": 94,
+   "share": 4.25,
+   "distinct_payers_served": 25
+  },
+  {
+   "submitter": "0xca5e87f82b3fa093800e6ad67d621a427d79c70d",
+   "settlements": 93,
+   "share": 4.2,
+   "distinct_payers_served": 22
+  },
+  {
+   "submitter": "0x8f5cb67b49555e614892b7233cfddebfb746e531",
+   "settlements": 93,
+   "share": 4.2,
+   "distinct_payers_served": 21
+  },
+  {
+   "submitter": "0x64cc42b1ce598e3abcfbb64df4688521ddbf1f0a",
+   "settlements": 89,
+   "share": 4.02,
+   "distinct_payers_served": 23
+  },
+  {
+   "submitter": "0x59b7ebc67a3d627fabaf06768c818638452ae704",
+   "settlements": 88,
+   "share": 3.98,
+   "distinct_payers_served": 18
+  },
+  {
+   "submitter": "0xa32ccda98ba7529705a059bd2d213da8de10d101",
+   "settlements": 88,
+   "share": 3.98,
+   "distinct_payers_served": 13
+  },
+  {
+   "submitter": "0x42dd53906b49c202e8e934b059dc019e04634b00",
+   "settlements": 85,
+   "share": 3.84,
+   "distinct_payers_served": 24
+  },
+  {
+   "submitter": "0x772003a2e9c2ccc8af956870a37a66f64f8cec38",
+   "settlements": 84,
+   "share": 3.8,
+   "distinct_payers_served": 18
+  },
+  {
+   "submitter": "0x14fda13953fc30428938e6bf950d036e77214e52",
+   "settlements": 83,
+   "share": 3.75,
+   "distinct_payers_served": 18
+  },
+  {
+   "submitter": "0xe74817f4cdc15844314812b2271276e64e890fae",
+   "settlements": 83,
+   "share": 3.75,
+   "distinct_payers_served": 18
+  },
+  {
+   "submitter": "0xb87e1a2cc2b4643f2892768e80e41167f17c5860",
+   "settlements": 82,
+   "share": 3.71,
+   "distinct_payers_served": 17
+  },
+  {
+   "submitter": "0x67b9ce703d9ce658d7c4ac3c289cea112fe662af",
+   "settlements": 78,
+   "share": 3.52,
+   "distinct_payers_served": 15
+  },
+  {
+   "submitter": "0x68efafe862d89ce66dd3d7b07d5a3747a0871164",
+   "settlements": 77,
+   "share": 3.48,
+   "distinct_payers_served": 19
+  },
+  {
+   "submitter": "0x68a96f41ff1e9f2e7b591a931a4ad224e7c07863",
+   "settlements": 67,
+   "share": 3.03,
+   "distinct_payers_served": 18
+  },
+  {
+   "submitter": "0x136008978ad053942dcdbe759a0903f5d84966fa",
+   "settlements": 39,
+   "share": 1.76,
+   "distinct_payers_served": 1
+  },
+  {
+   "submitter": "0x402feee072d655b85e08f1751af9ddbcd249521f",
+   "settlements": 17,
+   "share": 0.77,
+   "distinct_payers_served": 11
+  },
+  {
+   "submitter": "0xc6699d2aada6c36dfea5c248dd70f9cb0235cb63",
+   "settlements": 13,
+   "share": 0.59,
+   "distinct_payers_served": 6
+  },
+  {
+   "submitter": "0xb2bd29925cbbcea7628279c91945ca5b98bf371b",
+   "settlements": 8,
+   "share": 0.36,
+   "distinct_payers_served": 3
+  },
+  {
+   "submitter": "0xb5d25e1fa0718bf3e1bf698f96791d4e93632ec8",
+   "settlements": 7,
+   "share": 0.32,
+   "distinct_payers_served": 2
+  },
+  {
+   "submitter": "0x3210d7b21bfe1083c9dddbe17e8f947c9029a584",
+   "settlements": 6,
+   "share": 0.27,
+   "distinct_payers_served": 5
+  },
+  {
+   "submitter": "0x6cb960c17a623575dd8db626899c0645ed30e3d5",
+   "settlements": 6,
+   "share": 0.27,
+   "distinct_payers_served": 6
+  },
+  {
+   "submitter": "0x46616a055e7e0e059307a313a9d345e050a493fd",
+   "settlements": 4,
+   "share": 0.18,
+   "distinct_payers_served": 4
+  },
+  {
+   "submitter": "0x4af2ef4d8ef1ae8efd7dc78de82830eea431d9db",
+   "settlements": 4,
+   "share": 0.18,
+   "distinct_payers_served": 2
+  },
+  {
+   "submitter": "0xd2f74a14522d40e4a1d7fbb62aa97ce99fa1a7e5",
+   "settlements": 4,
+   "share": 0.18,
+   "distinct_payers_served": 2
+  },
+  {
+   "submitter": "0xa9236f4950001355455a5b016a25fa27b947c9ac",
+   "settlements": 4,
+   "share": 0.18,
+   "distinct_payers_served": 4
+  },
+  {
+   "submitter": "0x37dfb4033d5dd98fd335f24d0d42e8fe68d587d6",
+   "settlements": 3,
+   "share": 0.14,
+   "distinct_payers_served": 3
+  },
+  {
+   "submitter": "0x24d4f332d8e886fc005bb4a103bad21d9ebc2b7f",
+   "settlements": 3,
+   "share": 0.14,
+   "distinct_payers_served": 1
+  },
+  {
+   "submitter": "0xaa0df01e4d11decf2ad2c459c81d3a495e4f1925",
+   "settlements": 3,
+   "share": 0.14,
+   "distinct_payers_served": 1
+  },
+  {
+   "submitter": "0x2bb201f1bb056eb738718bd7a3ad1bef24b883bb",
+   "settlements": 2,
+   "share": 0.09,
+   "distinct_payers_served": 1
+  },
+  {
+   "submitter": "0x3e32f4746f22499ae938fa956b6fc259dc0b3ce7",
+   "settlements": 2,
+   "share": 0.09,
+   "distinct_payers_served": 2
+  },
+  {
+   "submitter": "0x5e3bdbd087ecbbe0a4b3f794acda04610ff2c8a5",
+   "settlements": 2,
+   "share": 0.09,
+   "distinct_payers_served": 1
+  },
+  {
+   "submitter": "0x211d98242e4c58e9eb17e3cc135a165bd59dd172",
+   "settlements": 2,
+   "share": 0.09,
+   "distinct_payers_served": 1
+  },
+  {
+   "submitter": "0x12a9a43b97985f160b1ca4f28b4bb8fe359aa21b",
+   "settlements": 2,
+   "share": 0.09,
+   "distinct_payers_served": 1
+  },
+  {
+   "submitter": "0xc67b555b4a9d340ed7c5d87743163c31a75f2254",
+   "settlements": 2,
+   "share": 0.09,
+   "distinct_payers_served": 1
+  },
+  {
+   "submitter": "0x6fec2c4aaef574f78d32fc4a09ebe055143eaf40",
+   "settlements": 1,
+   "share": 0.05,
+   "distinct_payers_served": 1
+  },
+  {
+   "submitter": "0x730dc2dc1c60ce5f0630a4adf4e4c20f3edf7faa",
+   "settlements": 1,
+   "share": 0.05,
+   "distinct_payers_served": 1
+  },
+  {
+   "submitter": "0x09229d5577ad1c70bfb8c647cecaa99fcd644223",
+   "settlements": 1,
+   "share": 0.05,
+   "distinct_payers_served": 1
+  },
+  {
+   "submitter": "0xc7c289fee64f2d6d480bee62acb907e0bdbe61a5",
+   "settlements": 1,
+   "share": 0.05,
+   "distinct_payers_served": 1
+  },
+  {
+   "submitter": "0xe62923133a417cee4241677865ed5a63f44f4b54",
+   "settlements": 1,
+   "share": 0.05,
+   "distinct_payers_served": 1
+  },
+  {
+   "submitter": "0x03ea198037d2415010acd560f0fb5b703b90c2d4",
+   "settlements": 1,
+   "share": 0.05,
+   "distinct_payers_served": 1
+  },
+  {
+   "submitter": "0xd8ba61a0b0974db0ec8e325c7628470526558e9b",
+   "settlements": 1,
+   "share": 0.05,
+   "distinct_payers_served": 1
+  },
+  {
+   "submitter": "0xc22efc62c5fcdb9f5b0797b2981a410f943ee4a1",
+   "settlements": 1,
+   "share": 0.05,
+   "distinct_payers_served": 1
+  },
+  {
+   "submitter": "0x2772f7f74ac0aca38c6238aa5ece72b27beb8c17",
+   "settlements": 1,
+   "share": 0.05,
+   "distinct_payers_served": 1
+  },
+  {
+   "submitter": "0x31fe6a3663114bad231a2f858e4f6d55c2b080c4",
+   "settlements": 1,
+   "share": 0.05,
+   "distinct_payers_served": 1
+  },
+  {
+   "submitter": "0xaf672cf5621b597f0b2322978c0806aeba44f2f6",
+   "settlements": 1,
+   "share": 0.05,
+   "distinct_payers_served": 1
+  },
+  {
+   "submitter": "0xca9f56efce00eefb1b7df1cfe287c0e605e8d201",
+   "settlements": 1,
+   "share": 0.05,
+   "distinct_payers_served": 1
+  },
+  {
+   "submitter": "0x0b44230e5a73fdd638e834deb4910e176dfc80fc",
+   "settlements": 1,
+   "share": 0.05,
+   "distinct_payers_served": 1
+  },
+  {
+   "submitter": "0xb89a017e147a907ab8e869c58464adf0470ae8ac",
+   "settlements": 1,
+   "share": 0.05,
+   "distinct_payers_served": 1
+  },
+  {
+   "submitter": "0xa2b861392351cb9476680740c40ec882e90cfedd",
+   "settlements": 1,
+   "share": 0.05,
+   "distinct_payers_served": 1
+  },
+  {
+   "submitter": "0xd05ccadeba955beb668366c8cd2059bdb2618260",
+   "settlements": 1,
+   "share": 0.05,
+   "distinct_payers_served": 1
+  },
+  {
+   "submitter": "0xe9f71bbc99f55533481a7d1df1e0a7bb798f982b",
+   "settlements": 1,
+   "share": 0.05,
+   "distinct_payers_served": 1
+  },
+  {
+   "submitter": "0xa4bbe37f9a6ae2dc36a607b91eb148c0ae163c91",
+   "settlements": 1,
+   "share": 0.05,
+   "distinct_payers_served": 1
+  },
+  {
+   "submitter": "0x79f327d97b6d406ae7010742fda48cb260d76a38",
+   "settlements": 1,
+   "share": 0.05,
+   "distinct_payers_served": 1
+  }
+ ]
+}

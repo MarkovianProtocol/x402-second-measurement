@@ -1,0 +1,69 @@
+{
+ "sampled_blocks": 400,
+ "settlements": 2213,
+ "distinct_submitters": 77,
+ "distinct_payers": 343,
+ "components": 36,
+ "top_components": [
+  {
+   "submitters": 23,
+   "payers": 164,
+   "settlements": 1802,
+   "share": 81.43
+  },
+  {
+   "submitters": 1,
+   "payers": 114,
+   "settlements": 264,
+   "share": 11.93
+  },
+  {
+   "submitters": 1,
+   "payers": 1,
+   "settlements": 39,
+   "share": 1.76
+  },
+  {
+   "submitters": 5,
+   "payers": 3,
+   "settlements": 19,
+   "share": 0.86
+  },
+  {
+   "submitters": 1,
+   "payers": 11,
+   "settlements": 17,
+   "share": 0.77
+  },
+  {
+   "submitters": 13,
+   "payers": 1,
+   "settlements": 13,
+   "share": 0.59
+  },
+  {
+   "submitters": 1,
+   "payers": 5,
+   "settlements": 6,
+   "share": 0.27
+  },
+  {
+   "submitters": 1,
+   "payers": 6,
+   "settlements": 6,
+   "share": 0.27
+  },
+  {
+   "submitters": 1,
+   "payers": 4,
+   "settlements": 4,
+   "share": 0.18
+  },
+  {
+   "submitters": 1,
+   "payers": 2,
+   "settlements": 4,
+   "share": 0.18
+  }
+ ]
+}
