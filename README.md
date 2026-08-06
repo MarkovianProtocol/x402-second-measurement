@@ -45,13 +45,13 @@ Headline: in this window there were **234,490 settlements from 3,704 distinct
 payers**, of which a single address accounted for **56.9%**. That address, and
 **34 of the 40 busiest payers — together 77.6% of all settlement — have a
 transaction count of zero.** They have never sent a transaction. None of them is
-a contract.
+a contract. They are keys that sign authorizations off-chain while other wallets
+submit the transactions and pay the gas.
 
 On value: 200,530 settlements joined unambiguously to an amount, totalling
 **$558,695.15**, with a **median payment of $0.0149** and a value Gini of 0.9957.
 A **single payer→payee pair accounted for 133,527 settlements — 66.6% of the
-entire market** in the window. They are keys that sign authorizations off-chain while other wallets
-submit the transactions and pay the gas.
+entire market** in the window.
 
 ## What this does and does not show
 
