@@ -5,7 +5,7 @@ import json
 import os
 import statistics
 
-D = os.path.expanduser("~/x402_measure")
+D = os.environ.get("X402_DIR", os.path.expanduser("~/x402_measure"))
 
 
 def gini(vals):

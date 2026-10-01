@@ -17,8 +17,8 @@ USDC = "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913"
 AUTH = "0x98de503528ee59b575ef0c0a2576a82497bfc029a5685b209e9ec333479b10a5"
 RPC = os.environ.get("BASE_RPC", "https://mainnet.base.org")
 CHUNK = 1500
-OUT = os.path.expanduser("~/x402_measure/authorizations.jsonl")
-META = os.path.expanduser("~/x402_measure/window.json")
+OUT = os.path.join(os.environ.get("X402_DIR", os.path.expanduser("~/x402_measure")), "authorizations.jsonl")
+META = os.path.join(os.environ.get("X402_DIR", os.path.expanduser("~/x402_measure")), "window.json")
 
 
 def rpc(method, params, tries=4):
@@ -52,11 +52,14 @@ def get_logs_split(start, end, depth=0):
 
 
 def main():
-    hours = float(sys.argv[1]) if len(sys.argv) > 1 else 24.0
+    hours = float(sys.argv[1]) if len(sys.argv) > 1 and sys.argv[1] != "-" else 24.0
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
-    head = int(rpc("eth_blockNumber", []), 16)
-    blocks = int(hours * 3600 / 2)          # Base ~2s blocks
-    lo, hi = head - blocks, head
+    if len(sys.argv) > 3:                   # fixed window: x402_pull.py - FROM_BLOCK TO_BLOCK
+        lo, hi = int(sys.argv[2]), int(sys.argv[3])
+    else:
+        head = int(rpc("eth_blockNumber", []), 16)
+        blocks = int(hours * 3600 / 2)      # Base ~2s blocks
+        lo, hi = head - blocks, head
     hdr = rpc("eth_getBlockByNumber", [hex(hi), False])
     lob = rpc("eth_getBlockByNumber", [hex(lo), False])
     json.dump({"rpc": RPC, "usdc": USDC, "event": "AuthorizationUsed",

@@ -22,7 +22,7 @@ from collections import defaultdict
 USDC = "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913"
 TRANSFER = "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef"
 RPC = os.environ.get("BASE_RPC", "https://mainnet.base.org")
-D = os.path.expanduser("~/x402_measure")
+D = os.environ.get("X402_DIR", os.path.expanduser("~/x402_measure"))
 OUT = os.path.join(D, "settlements.jsonl")
 
 

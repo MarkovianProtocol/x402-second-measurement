@@ -73,6 +73,10 @@ on their own behalf.
     python3 x402_values.py         # stage 2, writes settlements.jsonl
     python3 analyze.py             # regenerates findings.md
 
+To replay a fixed block window instead of the last 24 hours, and keep each run in its own folder:
+
+    X402_DIR=./run-aug05 python3 x402_pull.py - 49556153 49599353
+
 To check the single most load-bearing fact without running anything, ask any
 block explorer or RPC endpoint for the transaction count of
 `0x2b4ee3387008e5ff1a9996fc8b48d2fd61389037`.

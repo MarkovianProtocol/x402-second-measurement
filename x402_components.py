@@ -14,7 +14,7 @@ import time
 import urllib.request
 
 RPC = os.environ.get("BASE_RPC", "https://mainnet.base.org")
-D = os.path.expanduser("~/x402_measure")
+D = os.environ.get("X402_DIR", os.path.expanduser("~/x402_measure"))
 N_BLOCKS = 400
 
 
