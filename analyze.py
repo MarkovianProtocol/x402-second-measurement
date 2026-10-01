@@ -34,12 +34,27 @@ def main():
          f"- busiest payer: `{top[0][0]}` — {top[0][1]:,} ({100*top[0][1]/total:.1f}%)",
          f"- top 40 payers: {100*sum(k for _, k in top)/total:.1f}% of all settlements",
          f"- payer-count Gini: **{gini(payers.values()):.4f}**", "",
-         "## The payers", "",
-         "- the busiest payer's transaction count is **0**; it is not a contract; it holds 0.0001 ETH",
-         "- **34 of the 40 busiest payers have a transaction count of 0**; none is a contract",
-         "- ~20 distinct relayer wallets submitted the busiest payer's settlements (150-tx random sample)",
-         "- no inbound USDC to the top 4 payers during the window",
-         "- their balances: $6,892.99 / $12.67 / $176.89 / $617.58 / $3.13", ""]
+         "## The payers", ""]
+    pf = os.path.join(D, "payers.json")
+    if os.path.exists(pf):
+        p = json.load(open(pf))
+        rows = p["top40"]
+        where = f"block {p['state_block']:,}" + ("" if p["state_at_window_end"] else " (latest; window-end state not served)")
+        b = rows[0]
+        kind = lambda r: ("it is a contract" if r["contract"] else
+                          f"it is a wallet delegated to `{r['delegate']}` under EIP-7702" if r.get("delegate") else
+                          "it is not a contract")
+        L += [f"State read at {where}.", "",
+              f"- the busiest payer's transaction count is **{b['nonce']:,}**; " + kind(b) + f"; it holds {b['eth']:.4f} ETH",
+              f"- **{sum(r['nonce'] == 0 for r in rows)} of the {len(rows)} busiest payers have a transaction count of 0**; "
+              f"{sum(r['contract'] for r in rows)} are contracts; {sum(bool(r.get('delegate')) for r in rows)} are EIP-7702 delegated wallets",
+              f"- {p['busiest_submitters']} distinct wallets submitted the busiest payer's settlements "
+              f"({p['busiest_sample']}-tx random sample)",
+              "- USDC received by the top 4 payers during the window: "
+              + " / ".join(f"${r['usdc_in_window']:,.2f}" for r in rows[:4]),
+              "- USDC balances of the top 5: " + " / ".join(f"${r['usdc']:,.2f}" for r in rows[:5]), ""]
+    else:
+        L += ["_run x402_payers.py for this section_", ""]
 
     sf = os.path.join(D, "settlements.jsonl")
     if os.path.exists(sf) and os.path.getsize(sf):

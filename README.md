@@ -71,6 +71,7 @@ on their own behalf.
 
     python3 x402_pull.py 24        # stage 1, writes authorizations.jsonl + window.json
     python3 x402_values.py         # stage 2, writes settlements.jsonl
+    python3 x402_payers.py         # nonces, code, balances and submitters of the busiest payers
     python3 analyze.py             # regenerates findings.md
 
 To replay a fixed block window instead of the last 24 hours, and keep each run in its own folder:
